@@ -10,13 +10,10 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Gib mir ein Wort!");
-            string entry = Console.ReadLine();
-
-            string substring_entry = entry.Substring(3, 4);
-
-            Console.WriteLine("Old entry: " + entry);
-            Console.WriteLine("New entry: " + substring_entry);
+            for(int i = 0; i < 10; i+=2)
+            {
+                Console.WriteLine(i);
+            }
 
             Console.ReadLine();
         }
