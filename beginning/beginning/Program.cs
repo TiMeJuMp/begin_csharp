@@ -15,6 +15,10 @@ namespace beginning
             
             Console.WriteLine("Hello " + userName);
 
+            Console.WriteLine("Wie alt bist du ?");
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Du bist also " + age);
             Console.ReadLine();
         }
     }
