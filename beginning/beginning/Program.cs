@@ -10,18 +10,18 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wie heißt du ?");
-            string userName = Console.ReadLine();
-            
-            Console.WriteLine("Hello " + userName);
-
-            Console.WriteLine("Wie alt bist du aktuell?");
+            Console.WriteLine("Wie alt bist du?");
             int age = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Wie alt bist du in X Jahren?");
-            int nextYear = Convert.ToInt32(Console.ReadLine());
-            int sumYears = age + nextYear; 
-            Console.WriteLine("Du bist also in "+ nextYear + " Jahren,  " + sumYears );
+            if (age < 18)
+            {
+                Console.WriteLine("Du kommscht hier net rein!");
+            }
+            else
+            {
+                Console.WriteLine("Viel Spaß!");
+
+            }
             Console.ReadLine();
         }
     }
