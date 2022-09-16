@@ -10,30 +10,38 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            string entry = "Das ist ein Text mit Wörtern";
-            //0: Das
-            //1: ist
-            //2: ein
-            //3: Text
-            //4: mit
-            //5: Wörtern
-            string[] entries = entry.Split(' ');
-            foreach(string wort in entries)
+            Random r = new Random();
+            int random_zahl = r.Next(0, 100);
+
+            Console.WriteLine("Rate meine zahl!");
+
+
+
+            //bool du_hast_gewonnen = false;
+            int geratene_zahl = 0;
+            do
             {
-                Console.WriteLine(wort);
-            }
+                geratene_zahl = Convert.ToInt32(Console.ReadLine());
 
-            for(int i= 0; i< entries.Length; i++)
-            {
-                Console.WriteLine(entries[i]);
-            }
-            
-            //for(int i = 0; i< 10; i++)
-            // {
-            // }
+                if (geratene_zahl == random_zahl)
+                {
+                    Console.WriteLine("Du hast gewonnen!");
+                    //du_hast_gewonnen = true;
 
+                }
+                else if (geratene_zahl > random_zahl)
+                {
+                    Console.WriteLine("Die gesuchte Zahl ist kleiner als die eingegebene Zahl");
+                }
+                else
+                {
+                    Console.WriteLine("Die gesuchte Zahl ist größer als die eingegebene Zahl!");
+                }
+            } while (geratene_zahl != random_zahl);
 
+            Console.WriteLine(random_zahl);
             Console.ReadLine();
+            
         }
     }
 }
