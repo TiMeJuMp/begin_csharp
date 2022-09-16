@@ -10,36 +10,27 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            Random r = new Random();
-            int random_zahl = r.Next(0, 100);
 
-            Console.WriteLine("Rate meine zahl!");
+            // [   |    |    |    |    ]
+            int[] zahlen = new int[5];
+
+            // [ 26 | 8 | 12  | 3  | 6  ]
+            int[] zahlen2 = new int[] { 26, 8, 12, 3, 6 };
 
 
-
-            //bool du_hast_gewonnen = false;
-            int geratene_zahl = 0;
-            do
+            for(int i = 0; i< zahlen.Length; i++)
             {
-                geratene_zahl = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Gebe mir eine Zahl für das Array!");
+                zahlen[i] = Convert.ToInt32(Console.ReadLine());
+            }
 
-                if (geratene_zahl == random_zahl)
-                {
-                    Console.WriteLine("Du hast gewonnen!");
-                    //du_hast_gewonnen = true;
+            Console.Write("[ ");
+            for(int i = 0; i<zahlen.Length; i++)
+            {
+                Console.Write($" {zahlen[i]}  | ");
+            }
+            Console.Write(" ]");
 
-                }
-                else if (geratene_zahl > random_zahl)
-                {
-                    Console.WriteLine("Die gesuchte Zahl ist kleiner als die eingegebene Zahl");
-                }
-                else
-                {
-                    Console.WriteLine("Die gesuchte Zahl ist größer als die eingegebene Zahl!");
-                }
-            } while (geratene_zahl != random_zahl);
-
-            Console.WriteLine(random_zahl);
             Console.ReadLine();
             
         }
