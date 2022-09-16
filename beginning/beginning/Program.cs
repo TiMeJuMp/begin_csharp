@@ -11,16 +11,36 @@ namespace beginning
         static void Main(string[] args)
         {
             Console.WriteLine("Wir holen uns jetzt eine Zahl aus Number()");
-            List<string> names = Number();
-            foreach (var name in names)
-            {
-                Console.WriteLine(names);
-            }
+            int zahl1 = 121;
+            int zahl2 = 5;
+
+            int ergebnis = Add(zahl1, zahl2);
+
+            double divideResult = Divide((double)zahl1, (double)zahl2);
+            Console.WriteLine(ergebnis);
+            Console.WriteLine(divideResult);
             Console.ReadLine();
 
         }
 
-        //static  Rückgabetyp   Name  (Parameter)
+        static int Add(int z1, int z2)
+        {
+            int summe = z1 + z2;
+            return summe;
+        }
+        static int Divide(int z1, int z2)
+        {
+            int ergbnis = z1 / z2;
+            return ergbnis;
+        }
+
+        static double Divide(double z1, double z2)
+        {
+            double ergebnis = z1 / z2;
+            return ergebnis;
+        }
+
+        //static  Rückgabetyp   MethodenName  (Parameter)
         static List<string> Number()
         {
             List<string> name = new List<string>();
