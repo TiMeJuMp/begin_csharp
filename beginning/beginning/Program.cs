@@ -13,20 +13,18 @@ namespace beginning
     {
         static void Main(string[] args)
         {
-            Car c1 = new Car(13494, "Audi","A3","2.0 TDI", 1900, "Rot", 4);
-
-
-            Car c2 = new Car(56553, "Volkswagen", "Golv V", "1.9 TDI", 1890, "Grau Metallic",4);
-
-            List<Car> cars = new List<Car>() { c1, c2};
+            List<Car> cars = new List<Car>() ;
+            for(int i = 0; i< 3; i++)
+            {
+                cars.Add(Car.AskUserForCar());
+            }
 
             foreach(Car car in cars)
             {
                 car.PrintCarInformation();
             }
 
-            Console.ReadLine();
-            
+            Console.ReadLine();            
         }
 
 
