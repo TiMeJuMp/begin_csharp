@@ -7,19 +7,12 @@ using System.Threading.Tasks;
 
 namespace beginning
 {
-    public class Car
-    {
-        public int TypeId { get; set; }
-        public string Make { get; set;}
-        public string Model { get; set; }
-        public string TypeName { get; set; }
-        public int CCM { get; set; }
-        public string Color { get; set; }
-        public int Tyres { get; set; }
+    public class Car : Vehicle
+    {        
         private Car ()
         {
-
         }
+
         public Car(int typeId, string make, string model, string typeName, int cCM, string color, int tyres)
         {
             TypeId = typeId;
